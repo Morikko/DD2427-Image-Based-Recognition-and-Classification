@@ -52,7 +52,11 @@ checkDerivativeNumerically(func, x, dx) ;
 
 x0 = randn(size(x), 'single') ;
 
+<<<<<<< HEAD
 forward = @l1LossForward; backward = @l1LossBackward ;
+=======
+forward = @l2LossForward; backward = @l2LossBackward ;
+>>>>>>> 830cf74b348209d4c39523bdfb7f6c0836a47835
 
 % Uncomment the followung line to test your L1 loss implementation
 % forward = @l1LossForward; backward = @l1LossBackward ;

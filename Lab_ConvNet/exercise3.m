@@ -50,7 +50,7 @@ net = addCustomLossLayer(net, @l2LossForward, @l2LossBackward) ;
 
 % Extra: uncomment the following line to use your implementation
 % of the L1 loss
-%net = addCustomLossLayer(net, @l1LossForward, @l1LossBackward) ;
+net = addCustomLossLayer(net, @l1LossForward, @l1LossBackward) ;
 
 % Train
 trainOpts.expDir = 'data/text-small' ;

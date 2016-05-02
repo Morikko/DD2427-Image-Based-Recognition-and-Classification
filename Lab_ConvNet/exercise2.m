@@ -23,7 +23,8 @@ p = randn(size(y), 'single') ;
 % Check the derivative numerically
 figure(21) ; clf('reset') ;
 set(gcf, 'name', 'Part 2.1: single layer backrpop') ;
-checkDerivativeNumerically(@(x) proj(p, vl_nnconv(x, w, [])), x, dx) ;
+%checkDerivativeNumerically(@(x) proj(p, vl_nnconv(x, w, [])), x, dx) ;
+checkDerivativeNumerically(@(w) proj(p, vl_nnconv(x, w, [])), w, dw) ;
 
 %% Part 2.2: Backpropagation
 
@@ -51,7 +52,7 @@ checkDerivativeNumerically(func, x, dx) ;
 
 x0 = randn(size(x), 'single') ;
 
-forward = @l2LossForward; backward = @l2LossBackward ;
+forward = @l1LossForward; backward = @l1LossBackward ;
 
 % Uncomment the followung line to test your L1 loss implementation
 % forward = @l1LossForward; backward = @l1LossBackward ;

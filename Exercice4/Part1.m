@@ -23,9 +23,6 @@ for i = 1:nbr_img
     clc;
 end
 
-%% Normalize
-% Try later
-
 %% Pegasos Algorithm
 [w, b] = TrainSVM(Xtrain, training_y, 0.0001, 60);
 yy = w' * Xtrain + b;

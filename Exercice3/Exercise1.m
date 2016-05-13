@@ -31,4 +31,9 @@ Xtrain_norm = (Xtrain - Xtrain_means)/ Xtrain_stds;
 [w, b] = TrainSVM(Xtrain_norm, training_y, 0.0001, nbr_img);
 yy = w' * Xtrain_norm + b;
 ys = sign(yy);
+
 coeff_train = (nbr_img - sum(ys'~=training_y))/nbr_img;
+training_loss = sum(sqrt(power(yy - training_y', 2)))/nbr_img;
+
+% I get a training coefficient of 96.2%
+% A training loss of 219.188

@@ -1,0 +1,1 @@
+run /home/eric/tmp/matconvnet-1.0-beta19/matlab/vl_setupnn
